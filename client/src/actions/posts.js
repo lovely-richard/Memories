@@ -1,7 +1,8 @@
 import { FETCH_ALL, CREATE, UPDATE, DELETE, LIKE } from '../constants/actionTypes';
-
 import * as api from '../api/index.js';
 
+//Redived each URL that used with axios module.
+//We can easily handle follow function using then and catch method. 
 export const getPosts = () => async (dispatch) => {
   try {
     const { data } = await api.fetchPosts();
